@@ -31,5 +31,10 @@ describe "Song" do
       song.artist = drake
       expect(song.artist_name).to eq("Drake")
     end 
+
+    it "returns nil if the song does not have an artist" do 
+      song = Song.new("Cool for the Summer")
+      expect(song.artist_name).to eq nil
+    end
   end
 end
