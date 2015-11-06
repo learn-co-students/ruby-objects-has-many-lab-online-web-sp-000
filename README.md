@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Build out the has many/belongs to relationshipb between two classes. 
+1. Build out the has many/belongs to relationship between two classes. 
 2. Build methods that use the has many/belongs to relationship between two classes. 
 3. Use a class variable to keep track data about a class. 
 4. Build a class method to expose data stored in a class variable. 
