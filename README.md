@@ -40,3 +40,5 @@ These methods should use, or extend, the has many/belongs to relationship you're
 You'll be required to write a class method that tracks the total number of songs, tallied up from all of the existing artists. You'll be required to write a similar method for the `Author` class. 
 
 How do we keep track of data regarding an entire class? With class variables! The `Artist` class should have a class variable, `@@song_count`. This variable should start out set equal to `0`. When should you increment this value? Anytime a new song is added to an artist. Your `.song_count` method should then return the value of the `@@song_count` variable. Build out the same logic for your `Author` class. 
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab' title='Ruby Objects Has Many Lab'>Ruby Objects Has Many Lab</a> on Learn.co and start learning to code for free.</p>
