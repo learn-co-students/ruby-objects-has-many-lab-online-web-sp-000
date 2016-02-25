@@ -27,6 +27,8 @@ How can an author have many posts and a post belong to an author? An individual 
 
 To get the tests on these methods passing, you'll need to define methods that take in an argument of a name (or title), use that argument to create a new song (or post) and *then* associate the objects. 
 
+For `add_post_by_title`, you'll want to make sure the body of the method associates the newly created post with an author, and adds the post to the author's collection.
+
 #### The `#artist_name` and `#author_name` Methods
 
 Build the methods `some_song.artist_name` and `some_post.author_name` that return the names of the artist and author of the given song and post respectively.
