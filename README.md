@@ -25,7 +25,7 @@ How can an author have many posts and a post belong to an author? An individual 
 
 #### The `#add_song_by_name` and `#add_post_by_title` Methods
 
-To get the tests on these methods passing, you'll need to define methods that take in an argument of a name (or title), use that argument to create a new song (or post) and *then* associate the objects. 
+To get the tests on these methods passing, you'll need to define methods that take in an argument of a name (or title), use that argument to create a new song (or post) and *then* associate the objects. Be sure to return the new song (or post) at the end of the method.
 
 For `add_post_by_title`, you'll want to make sure the body of the method associates the newly created post with an author and adds the post to the author's collection.
 
@@ -43,4 +43,4 @@ You'll be required to write a class method that tracks the total number of songs
 
 How do we keep track of data regarding an entire class? With class variables! The `Artist` class should have a class variable, `@@song_count`. This variable should start out set equal to `0`. When should you increment this value? Anytime a new song is added to an artist. Your `.song_count` method should then return the value of the `@@song_count` variable. Build out the same logic for your `Author` class. 
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab' title='Ruby Objects Has Many Lab'>Ruby Objects Has Many Lab</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab'>Has Many Object Lab</a> on Learn.co and start learning to code for free.</p>
