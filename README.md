@@ -19,9 +19,15 @@ This lab is primarily test-driven. So run the test suite with the `learn` comman
 
 ### Building the has many/belongs to relationship
 
-How can an artist have many songs and a song belong to an artist? An individual song will need to hold a reference to the artist it belongs, to meaning it will need to have an `artist=()` and `artist` method. And an individual artist will need a method that returns a collection of all the songs that belong to that artist.
+How can an artist have many songs and a song belong to an artist? An individual song will need to have a reference to the artist it belongs to, meaning it will need to have an `artist=()` and `artist` method. And an individual artist will need a method that returns a collection of all the songs that belong to that artist. Which means the song class will need to have a global variable that holds all instances of every song that's been created in an array. To access that array, the song class will also need a class method that returns the global variable holding those instances.
 
-How can an author have many posts and a post belong to an author? An individual post will need to hold a reference to the author it belongs to, meaning it will need to have an `author=()` and `author` method. And an individual author will need a method that returns a collection of all the posts that belong to that author.
+How can an author have many posts and a post belong to an author? An individual post will need to hold a reference to the author it belongs to, meaning it will need to have an `author=()` and `author` method. And an individual author will need a method that returns a collection of all the posts that belong to that author. Which means the post class will need to have a global variable that holds all instances of every post that's been created in an array. To access that array, the post class will also need a class method that returns the global variable holding those instances.
+
+### Who knows about who?
+
+In order to have an artist find all of it's songs, the song class needs to know about all its song instances and a song instance needs to know about the artist class it belongs to.
+
+The same goes for an author and a post. To do this, you'll need to create a global variable that keeps track of all
 
 #### The `#add_song_by_name` and `#add_post_by_title` Methods
 
@@ -39,8 +45,6 @@ These methods should use, or extend, the has many/belongs to relationship you're
 
 ### The `.song_count` and `.post_count` Methods
 
-You'll be required to write a class method that tracks the total number of songs, tallied up from all of the existing artists. You'll be required to write a similar method for the `Author` class.
-
-How do we keep track of data regarding an entire class? With class variables! The `Artist` class should have a class variable, `@@song_count`. This variable should start out set equal to `0`. When should you increment this value? Anytime a new song is added to an artist. Your `.song_count` method should then return the value of the `@@song_count` variable. Build out the same logic for your `Author` class.
+You'll be required to write a class method that returns the total number of songs that have been created. You'll be required to write a similar method for the `Author` class. How can we get access to total number of songs from the artist class or the total number of posts from the author class?
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab'>Has Many Object Lab</a> on Learn.co and start learning to code for free.</p>

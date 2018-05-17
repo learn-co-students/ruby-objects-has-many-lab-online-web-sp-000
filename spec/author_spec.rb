@@ -23,7 +23,7 @@ describe "Author" do
     end
 
     describe "#add_post" do
-      it "takes in an argument of a post and associates that post with the author by telling the post that it belongs to that author" do  
+      it "takes in an argument of a post and associates that post with the author by telling the post that it belongs to that author" do
         hello_world = Post.new("Hello World")
         betty.add_post(hello_world)
         expect(betty.posts).to include(hello_world)
@@ -45,10 +45,7 @@ describe "Author" do
         # binding.pry
         expect(Author.post_count).to eq(2)
       end
-
-      it "uses the class variable, @@post_count" do
-        expect(Author.class_variable_get(:@@post_count)).to be_a(Integer)
-      end
     end
+    
   end
 end

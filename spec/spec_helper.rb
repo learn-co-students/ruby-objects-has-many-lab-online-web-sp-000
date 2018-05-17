@@ -1,7 +1,10 @@
+require 'pry'
 require_relative "../lib/artist.rb"
 require_relative "../lib/song.rb"
 require_relative "../lib/author.rb"
 require_relative "../lib/post.rb"
+
+# binding.pry
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
