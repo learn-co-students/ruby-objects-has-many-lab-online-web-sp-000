@@ -1,5 +1,4 @@
 require "spec_helper"
-require 'pry'
 
 describe "Author" do
 
@@ -46,6 +45,6 @@ describe "Author" do
         expect(Author.post_count).to eq(2)
       end
     end
-    
+
   end
 end
