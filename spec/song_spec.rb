@@ -14,13 +14,13 @@ describe "Song" do
       expect{Song.new("Say my Name")}.to_not raise_error
     end
 
-    it "pushes new instances into a global variable called @@all upon initialization" do
+    it "pushes new instances into a class variable called @@all upon initialization" do
       expect(Song.class_variable_get(:@@all)).to match([song, song2])
     end
   end
 
   describe "@@all" do
-    it "is a global variable set to an array" do
+    it "is a class variable set to an array" do
       expect(Song.class_variable_get(:@@all)).to be_a(Array)
     end
   end
