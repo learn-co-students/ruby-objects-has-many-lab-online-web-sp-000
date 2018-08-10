@@ -19,15 +19,15 @@ This lab is primarily test-driven. So run the test suite with the `learn` comman
 
 ### Building the has many/belongs to relationship
 
-How can an artist have many songs and a song belong to an artist? An individual song will need to have a reference to the artist it belongs to, meaning it will need to have an `artist=()` and `artist` method. And an individual artist will need a method that returns a collection of all the songs that belong to that artist. Which means the song class will need to have a global variable that holds all instances of every song that's been created in an array. To access that array, the song class will also need a class method that returns the global variable holding those instances.
+How can an artist have many songs and a song belong to an artist? An individual song will need to have a reference to the artist it belongs to, meaning it will need to have an `artist=()` and `artist` method. And an individual artist will need a method that returns a collection of all the songs that belong to that artist. Which means the song class will need to have a class variable that holds all instances of every song that's been created in an array. To access that array, the song class will also need a class method that returns the class variable holding those instances.
 
-How can an author have many posts and a post belong to an author? An individual post will need to hold a reference to the author it belongs to, meaning it will need to have an `author=()` and `author` method. And an individual author will need a method that returns a collection of all the posts that belong to that author. Which means the post class will need to have a global variable that holds all instances of every post that's been created in an array. To access that array, the post class will also need a class method that returns the global variable holding those instances.
+How can an author have many posts and a post belong to an author? An individual post will need to hold a reference to the author it belongs to, meaning it will need to have an `author=()` and `author` method. And an individual author will need a method that returns a collection of all the posts that belong to that author. Which means the post class will need to have a class variable that holds all instances of every post that's been created in an array. To access that array, the post class will also need a class method that returns the class variable holding those instances.
 
 ### Who knows about who?
 
 In order to have an artist find all of it's songs, the song class needs to know about all its song instances and a song instance needs to know about the artist class it belongs to.
 
-The same goes for an author and a post. To do this, you'll need to create a global variable that keeps track of all its post instances and a post instance needs to know about the author class it belongs to.
+The same goes for an author and a post. To do this, you'll need to create a class variable that keeps track of all its post instances and a post instance needs to know about the author class it belongs to.
 
 #### The `#add_song_by_name` and `#add_post_by_title` Methods
 
