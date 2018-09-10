@@ -1,6 +1,6 @@
 tags:
   - has many
-  - belongs to 
+  - belongs to
   - object relations
 languages:
   - Ruby

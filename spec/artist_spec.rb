@@ -13,6 +13,7 @@ describe "Artist" do
     describe "#name" do
       it "has an attr_accessor for name" do
         expect(adele.name).to eq("Adele")
+      end
     end
 
     describe "#songs" do
@@ -43,6 +44,4 @@ describe "Artist" do
         expect(Artist.song_count).to eq(2)
       end
     end
-    
-  end
 end
