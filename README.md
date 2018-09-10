@@ -63,13 +63,14 @@ needs to know about the author class it belongs to.
 
 #### The `#add_song_by_name` and `#add_post_by_title` Methods
 
-To get the tests on these methods passing, you'll need to define methods that
-take in an argument of a name (or title), use that argument to create a new song
-(or post) and _then_ associate the objects. Be sure to return the new song (or
-post) at the end of the method.
+The `#add_song_by_name` method should take in an argument of a name (or title),
+use that argument to create a new song (or post) and _then_ associate the
+objects.
 
 For `add_post_by_title`, you'll want to make sure the body of the method
 associates the newly created post with an author.
+
+These methods don't need to return anything, they just create associations.
 
 #### The `#artist_name` and `#author_name` Methods
 
