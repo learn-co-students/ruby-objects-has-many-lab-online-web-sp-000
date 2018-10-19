@@ -1,6 +1,8 @@
+require 'pry'
+
 class Post
 
-  attr_accessor :author, :title
+  attr_accessor :author, :title, :name
 
   @@all = []
 
@@ -16,6 +18,12 @@ class Post
   def Post.post_count
     @@all.length
   end
+
+  def author_name
+   name = Author.new(name)
+   name = author.name
+  end
+
 
 
 
