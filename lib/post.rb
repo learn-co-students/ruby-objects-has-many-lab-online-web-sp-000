@@ -20,9 +20,8 @@ class Post
   end
 
   def author_name
-   name = Author.new(name)
-   name = author.name
-  end
+  self.author.name if self.author
+ end
 
 
 
