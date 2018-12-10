@@ -15,7 +15,14 @@ class Post
   
   def author_name 
 
+  if defined? self.author.name
   self.author.name
+  else
+  return nil 
+  end
+
+  
+  
   
   end
     

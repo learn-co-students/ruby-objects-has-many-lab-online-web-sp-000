@@ -29,5 +29,7 @@ class Artist
     @@all_songs.count
   end
   
+
+  
   
 end
