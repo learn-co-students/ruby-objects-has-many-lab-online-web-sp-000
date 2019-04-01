@@ -14,13 +14,20 @@ class Song
     @@all
   end
   
+  def name
+    @name  
+  end
+  
   def artist
-    artist = Artist.new
-    artist
+    @artist
   end
   
   def artist_name
-    artist.name
+    if artist
+      return artist.name
+    else
+      return nil
+    end
   end
-  
+    
 end
