@@ -13,16 +13,16 @@ end
 def add_song(song)
 @songs<<song
 song.artist=self
-@@allsongs[self.name]||=[]
-@@allsongs[self.name]<<song.name
+@@allsongs[self.name]||=[]#for my extra method #songlist, if @@allsongs[self.name] is undefined, it will be set to an empty array
+@@allsongs[self.name]<<song.name #for my extra method #songlist, pushing what I need to that array
 end
 
 def add_song_by_name(name)
   song=Song.new(name)
   @songs<<song
   song.artist=self
-  @@allsongs[self.name]||=[]
-  @@allsongs[self.name]<<song.name
+  @@allsongs[self.name]||=[] #for my extra method #songlist, if @@allsongs[self.name] is undefined, it will be set to an empty array
+  @@allsongs[self.name]<<song.name #for my extra method #songlist, pushing what I need to that array
 
 
 end
