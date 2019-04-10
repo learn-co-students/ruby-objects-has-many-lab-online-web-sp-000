@@ -7,8 +7,12 @@ class Post
     @@all << self 
   end 
   
-  def author 
-    
+  def author_name
+   if self.author != nil 
+    self.author.name  
+   else 
+     nil 
+   end 
   end 
   
   def self.all 
