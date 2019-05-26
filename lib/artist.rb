@@ -1,3 +1,5 @@
+require "pry"
+
 class Artist
   attr_accessor :name, :artist
   
@@ -22,17 +24,12 @@ class Artist
   end
   
   
-  
-  
   def self.song_count
-    counter = 0
-    
-    @songs.each do |songs|
-      counter += 1
-      
-      
+    count = 0
+    if song.artist == @name
+      count += 1
     end
-    counter
+    count
   end
   
   
