@@ -8,8 +8,7 @@ class Author
   
   #shakespeare.add_post("post") 
   def add_post(post)
-    self.posts << post   
-    Post.all << post  
+    self.posts << post
     post.author = self    
   end 
   
@@ -21,7 +20,7 @@ class Author
   
   # Author.post_count
   def self.post_count
-    Post.all.uniq.count
+    Post.all.count
   end 
   
 end 
