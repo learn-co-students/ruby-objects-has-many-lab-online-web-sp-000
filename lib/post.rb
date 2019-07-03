@@ -1,7 +1,7 @@
 class Post
 
-  attr_accessor :title, :author                  #BELONGS to author
-  @@all = []                         #class variable 'all posts' set to an array (@@all)
+  attr_accessor :title, :author             #BELONGS to author
+  @@all = []                                #class variable 'all posts' set to an array (@@all)
 
   def initialize(title)                    #is initialized with an argument of a title
     @title = title                         #has a title
@@ -13,6 +13,6 @@ class Post
   end
 
   def author_name
-    self.author.name
+    author.name if author           #boolean condition created inside of its own method
   end
 end

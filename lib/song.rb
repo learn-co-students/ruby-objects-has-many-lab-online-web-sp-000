@@ -1,7 +1,7 @@
 class Song
 
   attr_accessor :name, :artist                      #BELONGS TO name/artist attributes for our songs
-  @@all = []                                       #class variable set to an array
+  @@all = []                                       #class variable set to an array. Our list of all "THIS"
 
   def initialize(name)                #new is initialized with argument for name
     @name = name                      #HAS A name
@@ -13,6 +13,6 @@ class Song
   end
 
   def artist_name
-    self.artist.name                    #returns the instance of an artists name
+    artist.name if artist              # #boolean condition created inside of its own method. returns the instance of an artists name
   end
 end

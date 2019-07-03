@@ -1,22 +1,31 @@
 class Author
-  attr_accessor :name          #attribute for name
 
-  def initialize(name)        #initialized with a name
-    @name = name              #name instances set equal to our name attributes
-    @posts = []               #'HAS MANY' posts. Equal to an array. ALL posts belong to author
+  attr_accessor :name          #attribute for name
+  @@all = []                  #class variable = to array
+
+  def initialize(name)          #initialized with a name
+    @name = name                #name instances set equal to our name attributes
+    @@all << self              #'HAS MANY' posts. Equal to an array. ALL posts belong to author
+  end
+
+  def self.all
+    return @@all
   end
 
   def posts
-    return @posts             #returns the posts (array)
+    Post.all.select {|post| post.author == self}      #HAS MANY posts
   end
 
   def add_post(post)            #argument of a post and associates that post with the author by telling the post that it belongs to that author
-    @posts << post
     post.author = self          #self here = author
   end
 
   def add_post_by_title(title)
-
-
+    post = Post.new(title)           #creating a new instance of a post
+    post.author = self              #Makes sure it collects to a specifc (unique) author each time
   end
+
+  def self.post_count
+    Post.all.count           #class method returning total number of posts associated to all existing authors
+  end                         #using #count to return the number of elements in the array
 end

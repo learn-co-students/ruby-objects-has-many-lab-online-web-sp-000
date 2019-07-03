@@ -1,28 +1,33 @@
 class Artist
 
   attr_accessor :name               #has an accessor for name
+  @@all = []                        #class variable = to array
 
   def initialize(name)
     @name = name
-    @songs = []                    #HAS MANY songs (array). The artists' catalogue of songs essentially
+    @@all << self                    #HAS MANY songs (array). We then push all instances onto our class variable upon creation
+  end
+
+  def self.all
+    return @@all                  #returns our array of all (songs)
   end
 
   def songs
-    @songs
+    Song.all.select do |song|       #HAS MANY songs
+      song.artist == self           #SELECT all songs. associates song with the artist together = to self!
+    end
   end
 
   def add_song(song)             #Argument song, the associates that song with the artist. By telling song that it belongs to the artist
-    @songs << song
     song.artist = self            #self here = the artist... the song BELONGS TO the artist
   end
     #Combines first creating a song, then adding it to a given artist's collection of songs
-  def add_song_by_name(song)
+  def add_song_by_name(name)        #takes in argument name of (song)
     song = Song.new(name)           #creating a new instance of a song
-    @songs << song                  #adding songs artists collection
     song.artist = self              #Makes sure it collects to a specifc (unique) artist each time
-  end
+  end                               #last line of code also associates the song and artist together
 
   def self.song_count
-    return @songs.length
-  
+    return Song.all.count           #Count method in a class method returns number of songs associated to all existing artists
+  end
 end
