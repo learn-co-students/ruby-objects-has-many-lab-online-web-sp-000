@@ -22,8 +22,8 @@ class Author
 
   def add_post_by_title(title)
     post = Post.new(title)           #creating a new instance of a post
-    post.author = self              #Makes sure it collects to a specifc (unique) author each time
-  end
+    post.author = self               #Right here all we're doing is associating the objects its that simple
+  end                                #this method doesnt need to return anything
 
   def self.post_count
     Post.all.count           #class method returning total number of posts associated to all existing authors

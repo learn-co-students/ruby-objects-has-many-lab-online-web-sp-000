@@ -24,10 +24,10 @@ class Artist
     #Combines first creating a song, then adding it to a given artist's collection of songs
   def add_song_by_name(name)        #takes in argument name of (song)
     song = Song.new(name)           #creating a new instance of a song
-    song.artist = self              #Makes sure it collects to a specifc (unique) artist each time
-  end                               #last line of code also associates the song and artist together
+    song.artist = self              #Right here all we're doing is associating the objects its that simple
+  end                               
 
   def self.song_count
     return Song.all.count           #Count method in a class method returns number of songs associated to all existing artists
-  end
+  end                               #returning total number of songs that have been created. Direct call to our Song class
 end
