@@ -12,10 +12,12 @@ class Song
   end
 
   def name
-    artist.name
+    song
   end
 
   def artist_name
-    binding.pry
+    if defined?(self.artist.name)
+      self.artist.name
+    end
   end
 end
