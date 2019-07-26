@@ -2,10 +2,10 @@
 
 ## Objectives
 
-1.  Build out the has many/belongs to relationship between two classes.
-2.  Build methods that use the has many/belongs to relationship between two classes.
-3.  Use a class variable to track data about a class.
-4.  Build a class method to expose data stored in a class variable.
+- Build out the has many/belongs to relationship between two classes.
+- Build methods that use the has many/belongs to relationship between two classes.
+- Use a class variable to track data about a class.
+- Build a class method to expose data stored in a class variable.
 
 ## Instructions
 
@@ -16,10 +16,10 @@ should belong to an author.
 
 Because of the has many/belongs to relationship between your classes, the
 `Artist` tests, i.e. the tests in `spec/artist_spec.rb`, rely on some code in
-the `Song` class and vice versa. The same is true of the tests for the `Author`
-and `Post` classes. So, as you proceed through solving this lab, you will go
-back and forth between coding in `Artist` and `Song` and between coding in
-`Author` and `Post`.
+the `Song` class and vice versa. You will have to build out both the classes as
+you go. The same is true of the tests for the `Author` and `Post` classes. So,
+as you proceed through solving this lab, you will go back and forth between
+coding in `Artist` and `Song` and between coding in `Author` and `Post`.
 
 We recommend starting out by getting some of the initial `Artist` tests passing
 and switching to write code in the `Song` class as directed by the test output.
@@ -51,7 +51,7 @@ all instances of every post that's been created in an array. To access that
 array, the post class will also need a class method that returns the class
 variable holding those instances.
 
-### Who knows about who?
+### Who Knows About Who?
 
 In order to have an artist find all of it's songs, the song class needs to know
 about all its song instances and a song instance needs to know about the artist
