@@ -20,8 +20,8 @@ describe "Author" do
       it "has many posts" do
         expect(betty.posts).to be_a(Array)
         post = Post.new("My Post")
-        post.artist = betty
-        expect(betty.songs).to eq([post])
+        post.author = betty
+        expect(betty.posts).to eq([post])
       end
     end
 
@@ -45,8 +45,7 @@ describe "Author" do
 
     describe ".post_count" do
       it "is a class method that returns the total number of posts associated to all existing authors" do
-        # binding.pry
-        expect(Author.post_count).to eq(2)
+        expect(Author.post_count).to eq(3)
       end
     end
 
