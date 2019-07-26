@@ -19,6 +19,9 @@ describe "Author" do
     describe "#posts" do
       it "has many posts" do
         expect(betty.posts).to be_a(Array)
+        post = Post.new("My Post")
+        post.artist = betty
+        expect(betty.songs).to eq([post])
       end
     end
 
