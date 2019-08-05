@@ -17,10 +17,14 @@ class Artist
     add_song(newsong)
   end
 
-  def song_count=
-    #Song.all.length
-    binding.pry
-    1
+  def self.song_count
+    #binding.pry
+    Song.all.size
+  end
+
+  def artist_name
+    @name == nil ? nil : @name.name
+
   end
 
 end
