@@ -13,7 +13,7 @@ class Artist
   end
 
    def songs
-    @songs
+    Song.all.select {|word| word.artist == self}
   end
 
    def add_song(song_name)

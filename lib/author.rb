@@ -7,9 +7,13 @@ class Author
     @name = name
   end
 
+  #def posts
+    #@posts
+  #end
+
   def posts
-    @posts
-  end
+   Post.all.select {|word| word.author == self}
+ end
 
   def self.post_count
     @@post_count
