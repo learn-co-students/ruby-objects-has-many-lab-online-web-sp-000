@@ -12,17 +12,19 @@ class Post
     @@all
   end
   
-  def author
-    author = Author.new(author_name)
-    self.author = author
+  def assign_author(author)
+    author = Artist.new(author)
+    @author = author
+    self.author = @author
   end
   
   def author_name
-    if self.author == true
+    if self.author != nil
       author_name = self.author.name
       author_name
     else
       nil
+    end
   end
   
 end
