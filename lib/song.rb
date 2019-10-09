@@ -6,16 +6,24 @@
 #needs a class method that returns the class variable holding all of these instances
 
 class Song
-attr_accessor :artist
+attr_accessor :name, :artist
 
   @@all = []
   
-  def initialize(artist)
+  def initialize(name)
     @artist = artist
+    @name = name
     @@all << self
   end
   
   def self.all
-    @all
+    @@all
   end
+
+  def artist_name
+    if artist
+      artist.name
+    end
+  end
+  
 end
