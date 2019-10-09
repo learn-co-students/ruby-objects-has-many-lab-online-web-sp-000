@@ -6,5 +6,16 @@
 #needs a class method that returns the class variable holding all of these instances
 
 class Song
+attr_accessor :artist
+
+  @@all = []
   
+  def initialize(artist)
+    @artist = artist
+    @@all << self
+  end
+  
+  def self.all
+    @all
+  end
 end
