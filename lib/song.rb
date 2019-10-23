@@ -10,5 +10,8 @@ class Song
   def self.all
     @@all
   end
-  
+  def author_name
+    return nil if @artist.nil?
+    @author.name
+  end
 end
