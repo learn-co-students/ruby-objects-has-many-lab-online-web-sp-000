@@ -1,4 +1,5 @@
 class Author
+<<<<<<< HEAD
   attr_accessor :name
   @@all = []
   def initialize(name)
@@ -25,4 +26,6 @@ class Author
     count
   end
   
+=======
+>>>>>>> 2f05185856984d315dce4211688798a76a1cb8b4
 end
