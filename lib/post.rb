@@ -1,20 +1,33 @@
 class Post
-  attr_accessor :name, :author
+  attr_accessor :title, :author, :author_name
 
   @@all = []
 
   def initialize(name)
-    @name = name
+    @title = name
+    @@all << self
   end
 
 
-def author=(author)
-  @author = author
-  author.posts(self) unless author.posts.include?(self)
-end
 
-  def all
-    @all
+
+  def self.all
+    @@all
   end
+
+  def author_name
+    #  binding.pry
+    @author = author
+    @author.name
+    #  unless @author.name == nil
+    #    return nil
+  end
+  #  if author.name == true
+  #  self << author.name
+  #  elsif author.name == false || nil
+  #    return nil
+  #  end
+  #  end
+
 
 end
