@@ -7,7 +7,7 @@ class Song
     #@title = title
 
     @name = name
-
+    @@all << self
   end
 
   def artist=(artist)
@@ -15,8 +15,16 @@ class Song
     artist.add_song(self) unless artist.songs.include?(self)
   end
 
-  def all
+  def self.all
     @@all
   end
+
+  def artist_name
+    unless self.artist == nil
+    @artist.name
+    end
+  end
+
+
 
 end

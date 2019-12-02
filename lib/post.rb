@@ -17,16 +17,18 @@ class Post
 
   def author_name
     #  binding.pry
-    @author = author
-    @author.name
-    #  unless @author.name == nil
-    #    return nil
-  end
+#   @author.name
+
+      unless self.author == nil
+        return @author.name
+
+      end
+
   #  if author.name == true
   #  self << author.name
   #  elsif author.name == false || nil
   #    return nil
-  #  end
+   end
   #  end
 
 
