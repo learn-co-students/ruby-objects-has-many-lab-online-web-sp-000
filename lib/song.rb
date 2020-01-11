@@ -1,17 +1,13 @@
 class Song
-  # @@all = []
-  attr_accessor :title
-  attr_reader :artist
-  def initialize(title)
-    @title = title
-  end
+  attr_accessor :title, :artist
 
-  # def self.all
-  #   @@all
-  # end
+    def initialize(title)
+      @title = title
+    end
 
-  def artist= (artist)
-    @artist = artist
-    artist.add_song(self) << self unless artist.songs.include?(self)
-  end
+    def artist=(artist)
+      @artist = artist
+      artist.songs << self
+    end
+
 end
