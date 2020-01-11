@@ -7,8 +7,9 @@ class Artist
     @songs = []
   end
   def add_song (title)
-    binding.pry
-    Song.new(title).artist = self
+    # binding.pry
+    new_song = Song.new(title)
+    new_song.artist = self
 
 
     # title.artist = self
