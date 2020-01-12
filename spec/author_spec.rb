@@ -45,7 +45,7 @@ describe "Author" do
 
     describe ".post_count" do
       it "is a class method that returns the total number of posts associated to all existing authors" do
-        expect(Author.post_count).to eq(3)
+        expect(Author.post_count).to eq(2)
       end
     end
 
