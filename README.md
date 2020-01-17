@@ -57,6 +57,7 @@ In order to have an artist find all of it's songs, the song class needs to know
 about all its song instances and a song instance needs to know about the artist
 class it belongs to.
 
+
 The same goes for an author and a post. To do this, you'll need to create a
 class variable that keeps track of all its post instances and a post instance
 needs to know about the author class it belongs to.
