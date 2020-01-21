@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song 
   attr_accessor :name, :artist
   
@@ -17,6 +19,9 @@ class Song
   end
   
   def artist_name
+    # if song has an artist name, return what?
+    # if doesn't have an artist name, return nil 
     self.artist.name
   end 
 end 
+
