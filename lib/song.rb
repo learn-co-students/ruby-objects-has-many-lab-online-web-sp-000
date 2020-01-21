@@ -19,9 +19,13 @@ class Song
   end
   
   def artist_name
-    # if song has an artist name, return what?
+    # if song has an artist name, return the artist_name?
     # if doesn't have an artist name, return nil 
-    self.artist.name
+    if self.artist.name
+      self.artist.name 
+    else 
+      nil
+    end 
   end 
 end 
 
