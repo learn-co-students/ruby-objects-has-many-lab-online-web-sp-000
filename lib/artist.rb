@@ -6,11 +6,11 @@ class Artist
   
   def initialize(name)
     @name = name
-    @all << self
+    @@all << self
   end
   
   def self.all
-  @all
+  @@all
 end 
   
   def add_song(song)
@@ -21,12 +21,12 @@ end
     Song.all.select {|song| song.artist == self}
 end 
 
-def add_song_by_name(song)
-  song = Song.new
+def add_song_by_name(name)
+  song = Song.new(name)
   song.artist = self
 end
 
-def song_count
+def self.song_count
   Song.all.count 
 end 
 
