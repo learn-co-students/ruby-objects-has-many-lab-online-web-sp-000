@@ -16,14 +16,7 @@ describe "Author" do
       end
     end
 
-    describe "#posts" do
-      it "has many posts" do
-        expect(betty.posts).to be_a(Array)
-        post = Post.new("My Post")
-        post.author = betty
-        expect(betty.posts).to eq([post])
-      end
-    end
+    
 
     describe "#add_post" do
       it "takes in an argument of a post and associates that post with the author by telling the post that it belongs to that author" do
@@ -43,10 +36,5 @@ describe "Author" do
       end
     end
 
-    describe ".post_count" do
-      it "is a class method that returns the total number of posts associated to all existing authors" do
-        expect(Author.post_count).to eq(3)
-      end
-    end
-
+    
 end
