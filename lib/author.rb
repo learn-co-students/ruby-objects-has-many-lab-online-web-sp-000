@@ -1,5 +1,8 @@
+require 'pry'
+
 class Author 
-  attr_accessor :posts, :name, :title
+  
+  attr_accessor :posts, :name
   
   def initialize(name)
     @name = name
@@ -12,13 +15,13 @@ class Author
   
   def add_post(post_title)
     @posts << post_title
-    author.name = self if author.name != self
+    post_title.author = self if post_title.author != self
   end
 
   def add_post_by_title(title)
-    post = Post.new(title)
-    @posts << post
-    Post.author = self
+    new_post = Post.new(title)
+    @posts << new_post
+    new_post.author = self
   end
     
   def self.post_count 

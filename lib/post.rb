@@ -1,3 +1,5 @@
+require 'pry'
+
 class Post 
   attr_accessor :author, :title
   
@@ -16,6 +18,10 @@ class Post
     @@all 
   end
   
+  def author=(author)
+    @author = author
+  end
+  
   def author_name
     if @author == nil 
       return nil 
@@ -23,10 +29,5 @@ class Post
       @author.name 
     end 
   end 
-     
-  def author=(author)
-    @author = author
-  end
-  
-  
+    
 end
