@@ -20,8 +20,6 @@ class Song
   
   def artist=(artist)
     @artist = artist
-    binding.pry
-    artist.add_song(self) unless artist.songs.include? (self)
   end
   
   def artist_name
