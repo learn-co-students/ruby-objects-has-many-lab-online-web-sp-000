@@ -5,7 +5,7 @@ class Author
   end
   
   def posts
-    Post.all.select {|pst| pst.artist == self}
+    Post.all.select {|pst| pst.author == self}
   end
   
   def add_post(pst)
@@ -17,7 +17,8 @@ class Author
     add_post(pst)
   end
   
-  def post_count
+  def self.post_count
+    Post.all.count
   end
     
 end
