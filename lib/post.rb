@@ -1,25 +1,24 @@
+binding 'pry'
+
 class Post
-  attr_accessor :name
+  attr_accessor :title, :author
 
   @@all = []
 
-  def new(title)
-
+  def initialize(title)
+    @title = title
+    @@all << self
   end
 
   def self.all
     @@all
   end
 
-  def title
-
-  end
-
-  def author
-
-  end
-
   def author_name
+    if self.author
+      self.author.name
+    else
+    end
 
   end
 
