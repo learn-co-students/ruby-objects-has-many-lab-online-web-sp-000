@@ -1,4 +1,4 @@
-binding 'pry'
+
 
 class Post
   attr_accessor :title, :author
@@ -19,7 +19,6 @@ class Post
       self.author.name
     else
     end
-
   end
 
 end
