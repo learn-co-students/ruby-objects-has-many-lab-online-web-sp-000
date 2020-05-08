@@ -6,6 +6,6 @@ class Artist
     @songs = []
   end
  def songs
-   @songs << Song.new(name)
+   @songs << Song.name.artist
  end
 end
