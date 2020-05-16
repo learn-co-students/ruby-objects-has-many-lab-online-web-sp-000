@@ -15,10 +15,9 @@ class Post
 
 
   def author_name
-    if @author == nil
-      return nil
-    else
-      @author.name
-    end
+ if author
+    author.name
+else
   end
 end
+end 

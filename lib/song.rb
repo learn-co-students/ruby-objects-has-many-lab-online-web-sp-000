@@ -13,12 +13,10 @@ def self.all
   @@all
   end
 
-
 def artist_name
-if @artist == nil
-  nil
-else
-  @artist.name
+if artist
+  artist.name
+else 
     end
   end
 
