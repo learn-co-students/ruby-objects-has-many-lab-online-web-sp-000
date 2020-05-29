@@ -10,7 +10,7 @@ end
 
 #.all reffers to class variable @@all, returns array of all songs
 def self.all #self is referring to the class Song and not an instance of a song. outside of the scope of the method.
-@all
+@@all
 end
 #song.all would return to all instances of songs
 #song.all would still work. self is a better way, to not use the name of the class Song
