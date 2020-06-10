@@ -10,7 +10,7 @@ class Artist
         Song.all.select {|song| song.artist == self}
     end
     def add_song(song)
-        newSong = Song.new(song)
+        #newSong = Song.new(song)
         song.artist = self
     end
     def add_song_by_name(song)
@@ -18,7 +18,7 @@ class Artist
         newSong.artist = self
     end
     def self.song_count
-        binding.pry
+        #binding.pry
         Song.all.count
     end
 end
