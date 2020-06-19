@@ -98,3 +98,4 @@ the `Author` class. How can we get access to total number of songs from the
 artist class or the total number of posts from the author class?
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/ruby-objects-has-many-lab'>Has Many Object Lab</a> on Learn.co and start learning to code for free.</p>
+
