@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe 'Post' do
   let!(:post) { Post.new('My Blog Post!') }
