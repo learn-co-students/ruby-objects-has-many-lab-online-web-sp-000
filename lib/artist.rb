@@ -1,4 +1,8 @@
+require 'pry'
+
 class Artist
+
+  @@allSongs = 0
 
   attr_accessor :name
 
@@ -13,16 +17,22 @@ class Artist
 
   def add_song(song)
     @songs << song
+    @@allSongs += 1
+    if (song.artist != self)
+      song.artist = self
+    end
   end
 
   def add_song_by_name(songTitle)
     createdSong = Song.new(songTitle)
     @songs << createdSong
+    @@allSongs += 1
+    createdSong.artist = self
   end
 
   def self.song_count
-    total = @songs.length - 1
-    return total
+    @@allSongs
   end
+
 
 end
