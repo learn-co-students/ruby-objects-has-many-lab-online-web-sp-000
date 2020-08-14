@@ -14,7 +14,7 @@ class Song
 
   def artist=(artist)
     @artist = artist
-    @artist.songs << self 
+    @artist.songs << self
   end
 
   def artist
@@ -27,6 +27,9 @@ class Song
     else
       nil
     end
+
+    # one line: artist.name if artist
+    # returns artist.name if artist evalutes to true (i.e., if it exits)
   end
 
 end
