@@ -3,20 +3,20 @@ class Post
   attr_accessor :author, :title
   
   @@all = []
-  @@posts = []
   
- def initialize(name)
+  
+ def initialize(title)
+   @author = author
    @title = title
-    @@posts << self
     save
     end
     
-    def save
+  def save
     @@all << self
-    end 
+  end 
  
- def self.all 
+  def self.all 
    @@all 
- end
+  end
 
 end

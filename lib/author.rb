@@ -1,3 +1,5 @@
+require "pry"
+
 class Author
   attr_accessor :name
   
@@ -5,6 +7,7 @@ class Author
   
   def initialize(name)
     @name = name 
+    @@posts << self
     end
     
     def posts
@@ -16,6 +19,7 @@ class Author
     end 
     
     def add_post_by_title(title)
+   
     new = Post.new(title) 
     new.author = self
     end
