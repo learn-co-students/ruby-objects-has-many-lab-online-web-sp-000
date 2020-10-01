@@ -6,10 +6,9 @@ class Post
   
   
  def initialize(title)
-   @author = author
-   @title = title
-    save
-    end
+  @title = title
+  save
+  end
     
   def save
     @@all << self
@@ -20,11 +19,11 @@ class Post
   end
   
   def author_name
-      if !author.name
+      if !author
         return nil 
       else 
-        author.name
-  end
-end
+        author.name 
+      end
+     end
 
 end

@@ -19,4 +19,10 @@ def self.all
   @@all
 end 
 
+def artist_name 
+  if artist 
+    return artist.name
+  end
+end
+
 end
