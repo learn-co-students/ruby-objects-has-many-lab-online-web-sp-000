@@ -5,7 +5,7 @@ class Author
     def initialize(name)
       
       @name = name
-      @posts = []
+      #@posts = []
       
     end
     
@@ -24,7 +24,7 @@ class Author
     def add_post(post)
       
       post.author = self
-      @posts.push(post)
+      #@posts.push(post)
       
     end
     
