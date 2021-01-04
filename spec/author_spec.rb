@@ -13,15 +13,11 @@ describe "Author" do
     describe "#name" do
       it "has an attr_accessor for name" do
         expect(betty.name).to eq("Betty")
-      end
     end
 
     describe "#posts" do
       it "has many posts" do
         expect(betty.posts).to be_a(Array)
-        post = Post.new("My Post")
-        post.author = betty
-        expect(betty.posts).to eq([post])
       end
     end
 
@@ -45,8 +41,10 @@ describe "Author" do
 
     describe ".post_count" do
       it "is a class method that returns the total number of posts associated to all existing authors" do
-        expect(Author.post_count).to eq(3)
+        # binding.pry
+        expect(Author.post_count).to eq(2)
       end
     end
 
+  end
 end
