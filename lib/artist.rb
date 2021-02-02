@@ -18,5 +18,9 @@ class Artist
     add_song(song)
   end 
   
-  
+  def self.song_count 
+    count = 0 
+    Song.all.select {|song| count += 1}
+    count 
+  end 
 end 
