@@ -1,17 +1,21 @@
 class Author 
-  attr_accessor :name, :post 
-  @@all = [] 
+ attr_accessor :name 
+  
   
   def initialize(name)
     @name = name 
-    save 
   end 
   
-  def save 
-    @@all << self 
+  def add_post(post)
+   post.author = self 
+  end 
+ 
+  def posts 
+    post.all.select {|post| post.author == self}
   end 
   
-  def self.all 
-    @@all 
+  def add_post_by_name(name)
+    post = Post.new(name)
+    add_post 
   end 
 end 
