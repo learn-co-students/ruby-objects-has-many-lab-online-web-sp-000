@@ -6,20 +6,20 @@ class Author
     @name = name 
   end 
   
-  def add_post(post)
-   post.author = self 
+  def add_posts(posts)
+   posts.author = self 
   end 
  
-  def post 
-    post.all.select {|post| post.author == self}
+  def posts 
+    Posts.all.select {|post| post.Author == self}
   end 
   
-  def add_post_by_title(title)
-    post = Post.new(title)
-    add_post(post) 
+  def add_posts_by_title(title)
+    posts = Post.new(title)
+    add_posts(posts) 
   end 
   
-   def self.post_count 
+   def self.posts_count 
     count = 0 
     Post.all.select {|post| count += 1}
     count 
