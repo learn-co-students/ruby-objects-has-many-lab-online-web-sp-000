@@ -7,11 +7,15 @@ class Post
     save 
   end 
   
-  def save 
-    @@all << self 
+  def author_name 
+    self.author.name 
   end 
   
-  def self.all 
+  def save
+    @@all << self
+  end 
+  
+  def self.all
     @@all 
   end 
 end 
