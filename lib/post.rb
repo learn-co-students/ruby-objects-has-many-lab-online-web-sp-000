@@ -10,7 +10,10 @@ class Post
   end 
   
   def author_name(author=nil)
-    self.post.name
+    #author => nil
+    #self => #<Post:0x0000000001d5f5d8  @author=#<Author:0x0000000001d5f268 @name="Sophie">,  @title="My Blog Post!">
+    self.author.name
+    #self.author.name => "Sophie"
   end 
    
   def save 
