@@ -10,13 +10,6 @@ class Post
   end 
   
   def author_name(author=nil)
-    #self.author 
-    # last self.author.name 
-    #post.author.name
-    #post.author 
-    #posts.author = self
-    #@name
-    #self.name
     self.post.name
   end 
    

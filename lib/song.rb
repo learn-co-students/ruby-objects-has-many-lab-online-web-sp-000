@@ -7,8 +7,9 @@ class Song
     save 
   end 
   
-  def artist_name
+  def artist_name(name=nil)
     self.artist.name
+    binding.pry 
   end 
   
   def save
