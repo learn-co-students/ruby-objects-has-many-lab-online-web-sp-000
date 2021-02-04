@@ -55,5 +55,4 @@ describe 'Post' do
       expect(post.author_name).to eq nil
     end
   end
-  # binding.pry
-end
+ end
