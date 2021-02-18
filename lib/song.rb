@@ -1,6 +1,8 @@
+require_relative './artist.rb'
+
 class Song
 
-    attr_accessor :name, :artist
+    attr_accessor  :name, :artist
 
     @@all = []
 
@@ -14,6 +16,10 @@ class Song
     end
 
     def artist_name
-        
+        if self.artist != nil
+            self.artist.name
+         else
+            nil 
+        end
     end
 end
