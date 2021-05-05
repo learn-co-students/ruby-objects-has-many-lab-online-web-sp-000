@@ -26,4 +26,7 @@ class Artist
     def self.song_count
         Song.all.size
     end
+
 end
+
+artist = Artist.new("Rihanna")
