@@ -13,7 +13,6 @@ class Song
   end
   
   def artist_name
-    puts self.artist.name
-    self.artist.name
+    artist.name if artist
   end 
 end 
